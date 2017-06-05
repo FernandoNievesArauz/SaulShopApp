@@ -34,6 +34,13 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.ProductoViewHo
             producto_nombre_card = (TextView)itemView.findViewById(R.id.tv_cardview_producto_nombre);
             producto_precio_card = (TextView)itemView.findViewById(R.id.tv_cardview_producto_precio);
             producto_foto = (ImageView)itemView.findViewById(R.id.img_cardview_producto);
+
+            cv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
     }
 

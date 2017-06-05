@@ -57,8 +57,6 @@ public class RegistrarProducto extends AppCompatActivity{
         et_regprod_precio = (EditText)findViewById(R.id.et_producto_registro_precio);
         et_regprod_cantidad_stock = (EditText)findViewById(R.id.et_producto_registro_cantidadstock);
 
-        Toast.makeText(this,valor_nombre,Toast.LENGTH_SHORT).show();
-
         btn_registrar_producto = (Button)findViewById(R.id.btn_producto_registrar);
 
         btn_registrar_producto.setOnClickListener(new View.OnClickListener() {

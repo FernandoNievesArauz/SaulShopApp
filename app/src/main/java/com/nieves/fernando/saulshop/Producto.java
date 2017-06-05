@@ -16,7 +16,7 @@ public class Producto implements Serializable{
     private String precio;
     private String cantidad_stock;
 
-    private List<Producto> catalogoe;
+    List<Producto> catalogoe;
 
     // This method creates an ArrayList that has three Person objects
 // Checkout the project associated with this tutorial on Github if
@@ -29,8 +29,6 @@ public class Producto implements Serializable{
         this.descripcion_producto = descripcion_producto;
         this.precio = precio;
         this.cantidad_stock = cantidad_stock;
-
-
     }
 
     //Getters de Producto

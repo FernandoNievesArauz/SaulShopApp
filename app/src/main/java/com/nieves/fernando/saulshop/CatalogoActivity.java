@@ -58,16 +58,60 @@ public class CatalogoActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
+
         ArrayList<String> nombreProducto = new ArrayList<String>();
         for (Producto nuevo_producto: catalogo)
         {
             nombreProducto.add(nuevo_producto.getNombre_producto());
         }
 
-        ListView lista_catalogo = (ListView)findViewById(R.id.lv_productos);
+        LinearLayoutManager llm = new LinearLayoutManager(CatalogoActivity.this);
+        rv.setLayoutManager(llm);
+
+        MiAdaptador adapter = new MiAdaptador(catalogo);
+        rv.setAdapter(adapter);
+
+ /*       rv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CatalogoActivity.this,ActivityDetallesProducto.class);
+
+                intent.putExtra(getResources().getString(R.string.txt_id_producto),catalogo.get(position).getCodigo_producto());
+                intent.putExtra(getResources().getString(R.string.txt_nombre_producto),catalogo.get(position).getNombre_producto());
+                intent.putExtra(getResources().getString(R.string.txt_descripcion_producto),catalogo.get(position).getDescripcion_producto());
+                intent.putExtra(getResources().getString(R.string.txt_precio_producto),catalogo.get(position).getPrecio()).toString();
+                intent.putExtra(getResources().getString(R.string.txt_cantidad_stock_producto),catalogo.get(position).getCantidad_stock()).toString();
+
+                startActivity(intent);
+            }
+        });*/
+
+        rv.addOnItemTouchListener(new Recycler(this, rv, new Recycler.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(CatalogoActivity.this,ActivityDetallesProducto.class);
+
+                intent.putExtra(getResources().getString(R.string.txt_id_producto),catalogo.get(position).getCodigo_producto());
+                intent.putExtra(getResources().getString(R.string.txt_nombre_producto),catalogo.get(position).getNombre_producto());
+                intent.putExtra(getResources().getString(R.string.txt_descripcion_producto),catalogo.get(position).getDescripcion_producto());
+                intent.putExtra(getResources().getString(R.string.txt_precio_producto),catalogo.get(position).getPrecio()).toString();
+                intent.putExtra(getResources().getString(R.string.txt_cantidad_stock_producto),catalogo.get(position).getCantidad_stock()).toString();
+
+                startActivity(intent);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                Toast.makeText(CatalogoActivity.this,"Que tratas de hacer?",Toast.LENGTH_LONG).show();
+            }
+        }));
+
+
+        /*ListView lista_catalogo = (ListView)findViewById(R.id.lv_productos);
         lista_catalogo.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nombreProducto));
 
-        lista_catalogo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        rv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(CatalogoActivity.this,ActivityDetallesProducto.class);
@@ -80,7 +124,7 @@ public class CatalogoActivity extends AppCompatActivity implements View.OnClickL
 
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override
