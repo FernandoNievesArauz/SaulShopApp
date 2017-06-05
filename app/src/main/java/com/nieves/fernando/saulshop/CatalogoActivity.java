@@ -72,21 +72,6 @@ public class CatalogoActivity extends AppCompatActivity implements View.OnClickL
         MiAdaptador adapter = new MiAdaptador(catalogo);
         rv.setAdapter(adapter);
 
- /*       rv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CatalogoActivity.this,ActivityDetallesProducto.class);
-
-                intent.putExtra(getResources().getString(R.string.txt_id_producto),catalogo.get(position).getCodigo_producto());
-                intent.putExtra(getResources().getString(R.string.txt_nombre_producto),catalogo.get(position).getNombre_producto());
-                intent.putExtra(getResources().getString(R.string.txt_descripcion_producto),catalogo.get(position).getDescripcion_producto());
-                intent.putExtra(getResources().getString(R.string.txt_precio_producto),catalogo.get(position).getPrecio()).toString();
-                intent.putExtra(getResources().getString(R.string.txt_cantidad_stock_producto),catalogo.get(position).getCantidad_stock()).toString();
-
-                startActivity(intent);
-            }
-        });*/
-
         rv.addOnItemTouchListener(new Recycler(this, rv, new Recycler.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -106,25 +91,6 @@ public class CatalogoActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(CatalogoActivity.this,"Que tratas de hacer?",Toast.LENGTH_LONG).show();
             }
         }));
-
-
-        /*ListView lista_catalogo = (ListView)findViewById(R.id.lv_productos);
-        lista_catalogo.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nombreProducto));
-
-        rv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(CatalogoActivity.this,ActivityDetallesProducto.class);
-
-                intent.putExtra(getResources().getString(R.string.txt_id_producto),catalogo.get(position).getCodigo_producto());
-                intent.putExtra(getResources().getString(R.string.txt_nombre_producto),catalogo.get(position).getNombre_producto());
-                intent.putExtra(getResources().getString(R.string.txt_descripcion_producto),catalogo.get(position).getDescripcion_producto());
-                intent.putExtra(getResources().getString(R.string.txt_precio_producto),catalogo.get(position).getPrecio()).toString();
-                intent.putExtra(getResources().getString(R.string.txt_cantidad_stock_producto),catalogo.get(position).getCantidad_stock()).toString();
-
-                startActivity(intent);
-            }
-        });*/
     }
 
     @Override
@@ -142,8 +108,6 @@ public class CatalogoActivity extends AppCompatActivity implements View.OnClickL
                     String n_descrip=data.getExtras().getString("prod_descripcion");
                     String n_precio=data.getExtras().getString("prod_precio");
                     String n_cantidad=data.getExtras().getString("prod_cantidad_stock");
-
-                    Toast.makeText(this,n_codigo+n_nombre+n_descrip+n_precio+n_cantidad,Toast.LENGTH_LONG).show();
 
                     producto_nuevo = new Producto(n_codigo,n_nombre,n_descrip,n_precio,n_cantidad);
                     catalogo.add(producto_nuevo);

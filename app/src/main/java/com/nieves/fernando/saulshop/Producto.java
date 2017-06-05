@@ -16,6 +16,7 @@ public class Producto implements Serializable{
     private String precio;
     private String cantidad_stock;
 
+
     List<Producto> catalogoe;
 
     // This method creates an ArrayList that has three Person objects
