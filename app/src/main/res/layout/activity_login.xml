@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nieves.fernando.saulshop.Login">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamano_img_login_logo_alto"
+            android:src="@drawable/logo_transparente"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/txt_login_lbl_usuario"
+            android:textSize="@dimen/label_subtitulos"
+            android:id="@+id/textView3" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_usuario"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_login_lbl_pass"
+            android:textAlignment="center"
+            android:textSize="@dimen/label_subtitulos"
+            android:layout_below="@+id/et_usuario"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView2" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_password"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true"
+            android:inputType="textPassword"/>
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_login_btn_inicio"
+            android:layout_below="@id/et_password"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

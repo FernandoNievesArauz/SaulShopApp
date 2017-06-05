@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Saul Shop</string>
+
+    <string name="navigation_drawer_open">Abrir navegador del drawer</string>
+    <string name="navigation_drawer_close">Cerrar navegacion del drawer</string>
+
+    <string name="action_settings">Configuracion</string>
+
+    <string name="txt_salir_aviso">Confirmar Salida</string>
+    <string name="txt_salir_confirmar_salida">¿Esta seguro que quiere salir de la aplicacion?</string>
+
+
+    <string name="title_activity_catalogo">Catalogo</string>
+    <string name="title_activity_clientes">Clientes</string>
+
+    <string name="title_activity_detalle_cliente">Informacion del Cliente</string>
+
+    <string name="txt_nombre_cliente">Ejemplo Nombre</string>
+    <string name="txt_telefono_cliente">1111111111</string>
+    <string name="txt_correo_cliente">correo.de@ejemplo.com</string>
+    <string name="title_activity_clientes2">Lista de Clientes</string>
+    <string name="title_activity_detalles_producto">Detalles del Producto</string>
+
+    <!-- String default para producto-->
+    <string name="txt_id_producto">0000000000</string>
+    <string name="txt_nombre_producto">Producto Ejemplo</string>
+    <string name="txt_descripcion_producto">Esta es la descripcion default de Producto</string>
+    <string name="txt_precio_producto">$999</string>
+    <string name="txt_cantidad_stock_producto">99</string>
+    <string name="title_activity_simple_scanner">Escaner</string>
+
+    <!-- String del Lector de Codigos de Barra-->
+    <string name="txt_boton_lector">Leer Codigo de Barras</string>
+    <string name="title_activity_registrar_producto">Registrar nuevo producto:</string>
+
+    <!-- String para el activity "Registro de Producto"-->
+    <string name="txt_regprod_titulo">¡Registra un Producto!</string>
+    <string name="txt_regprod_boton_registrar">Registrar Producto</string>
+    <string name="txt_regprod_boton_registro_idproducto">Escanea Codigo</string>
+    <string name="txt_regprod_producto_label_nombre">Nombre del Producto: </string>
+    <string name="txt_regprod_producto_label_descripcion">Descripcion del Producto: </string>
+    <string name="txt_regprod_producto_label_precio">Precio del Producto: </string>
+    <string name="txt_regprod_producto_label_stock">Cantidad actual en Stock: </string>
+    <string name="title_activity_registro_productos">Registrar un Producto</string>
+    <string name="txt_regprod_label_id">ID de Producto: </string>
+
+    <!-- Strings para e activity "Registro de Clientes"-->
+    <string name="title_activity_registrar_cliente">Registrar un Cliente</string>
+    <string name="txt_regcli_lbl_nombre">Nombre del Cliente</string>
+    <string name="txt_regcli_lbl_telefono">Telefono del Cliente</string>
+    <string name="txt_regcli_lbl_email">Email del Cliente</string>
+    <string name="txt_regcli_lbl_imagen">Añadir Fotografia</string>
+    <string name="txt_regcli_btn_imagen_galeria">Buscar en Galeria</string>
+    <string name="txt_regcli_btn_imagen_camara">Tomar una Foto</string>
+    <string name="txt_regcli_btn_registrar">Registrar Cliente</string>
+
+    <!-- Strings para el activity "Login"-->
+    <string name="txt_login_lbl_usuario">Usuario</string>
+    <string name="txt_login_lbl_pass">Contraseña</string>
+    <string name="txt_login_btn_inicio">Iniciar Sesion</string>
+
+    <!-- Strings del activity "Main" -->
+    <string name="txt_main_lbl_bienvenida">Bienvenido a la App de SaulShop</string>
+    <string name="txt_main_lbl_descripcion">Este aplicacion te ayudara a tener un correcto control tanto
+    de tu inventario como de tus clientes!</string>
+    <string name="txt_main_lbl_descripcion_2">Haciendo uso de una base de datos, esta App le sera de gran utilidad a los
+    anministradores de cualquier negocio!</string>
+
+    <!-- String del fragment "Navbar"-->
+    <string name="txt_nav_usuario">Administrador</string>
+
+
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nieves.fernando.saulshop.ActivityDetalleCliente"
+    tools:showIn="@layout/activity_detalle_cliente">
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:textSize="@dimen/tamano_nombre"
+        android:text="@string/txt_nombre_cliente"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/lineallayout_telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        android:onClick="llamar"
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:id="@+id/img_telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_filled_50"/>
+
+        <TextView
+            android:id="@+id/tv_telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_telefono_cliente"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineallayout_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        android:onClick="correo"
+        tools:layout_editor_absoluteY="78dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:id="@+id/img_correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/message_filled_50"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="86dp" />
+
+        <TextView
+            android:id="@+id/tv_correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_correo_cliente" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nieves.fernando.saulshop.ActivityDetallesProducto"
+    tools:showIn="@layout/activity_detalles_producto">
+
+    <TextView
+        android:id="@+id/tv_nombre_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:textSize="@dimen/tamano_nombre"
+        android:text="@string/txt_nombre_producto"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/lineallayout_id_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_id_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_id_producto"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineallayout_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_descripcion_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_descripcion_producto"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineallayout_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        tools:layout_editor_absoluteY="78dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_precio_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_precio_producto" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lineallayout_cantidad_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/tamano_margen"
+        tools:layout_editor_absoluteY="78dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/tv_cantidad_stock_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_cantidad_stock_producto" />
+
+    </LinearLayout>
+
+</LinearLayout>

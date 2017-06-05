@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nieves.fernando.saulshop.RegistrarCliente"
+    tools:showIn="@layout/activity_registrar_producto">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_subtitulos"
+                android:text="@string/txt_regprod_label_id"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_registro_idproducto"
+                    android:layout_width="220dp"
+                    android:text=" "
+                    android:textSize="@dimen/label_subtitulos"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_regprod_boton_registro_idproducto"
+                    android:onClick="escanearCodigo"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_regprod_producto_label_nombre"
+                android:textSize="@dimen/label_subtitulos"/>
+
+            <EditText
+                android:id="@+id/et_producto_registro_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_regprod_producto_label_descripcion"
+                android:textSize="@dimen/label_subtitulos"/>
+
+            <EditText
+                android:id="@+id/et_producto_registro_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_regprod_producto_label_precio"
+                android:textSize="@dimen/label_subtitulos"/>
+
+            <EditText
+                android:id="@+id/et_producto_registro_precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_regprod_producto_label_stock"
+                android:textSize="@dimen/label_subtitulos"/>
+
+            <EditText
+                android:id="@+id/et_producto_registro_cantidadstock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_producto_registrar"
+                android:text="@string/txt_regprod_boton_registrar"
+                android:textSize="@dimen/label_subtitulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
